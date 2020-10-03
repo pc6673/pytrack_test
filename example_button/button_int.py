@@ -1,4 +1,4 @@
-https://techtutorialsx.com/2017/10/08/esp32-micropython-external-interrupts/
+# https://techtutorialsx.com/2017/10/08/esp32-micropython-external-interrupts/
 
 import machine
 
