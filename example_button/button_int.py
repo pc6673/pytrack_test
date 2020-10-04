@@ -2,17 +2,16 @@
 
 import machine
 
-pin_number = 14 
 interruptCounter = 0
 totalInterruptsCounter = 0
  
-def callback(pin):
+def pin_handler(pin):
   global interruptCounter
   interruptCounter = interruptCounter+1
  
-p25 = machine.Pin(pin_number, machine.Pin.IN, machine.Pin.PULL_UP)
+p14 = machine.Pin('P14', machine.Pin.IN, machine.Pin.PULL_UP)
  
-p25.irq(trigger=machine.Pin.IRQ_FALLING, handler=callback)
+p14.callback(trigger=machine.Pin.IRQ_FALLING, handler=pin_handler)
  
 while True:
  
